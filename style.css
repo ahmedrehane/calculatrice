@@ -26,7 +26,15 @@
     background-color: black;
     color: white;
     overflow:hidden;
+
 }
+#screen{
+    display:flex;
+    justify-content: flex-end;
+    font-size: x-large;
+    overflow: hidden;
+}
+
 
 
 .item2{
