@@ -46,10 +46,8 @@ for (let i =0 ; i < operations.length ; i++){
 equality.addEventListener('click', function(){
 console.log(equality.innerText)
 
-}
+})
     
-)
-
 
 
 
@@ -57,50 +55,45 @@ let valeur1 = ''
 
 let selectedOp = ''
 
-
-
-for(let operation of operations)
-operations.addEventListener('click',function){
-valeur1 = screen.innerText
-screen.innerText = ""
-console.log("valeur ===>",valeur1)
-selected0p = operation.innerText
-screen.innerText = ""
-console.log("selected0p ==>",selectedp)
-
-
-
-
-
-
+for(let operation of operations){
+  operation.addEventListener('click',function(){
+    valeur1 = screen.innerText
+  screen.innerText = ""
+  console.log("valeur ===>",valeur1)
+  selectedOp = operation.innerText
+  screen.innerText = ""
+  console.log("selected0p ==>",selectedOp)
+  })
 }
+
 
 
 
 
 function calculate(x, op, y) {
-    if (op === "+") {
-        return Number(x) + Number(y);
-      } else if (op === "÷") {
-        return x  y;
-      } else if (op === "×") {
-        return x * y;
-      } else if (op === "−") {
-        return x - y;
-      }
+  if (op === "+") {
+    return Number(x) + Number(y);
+  } else if (op === "÷") {
+    return x / y;
+  } else if (op === "×") {
+    return x * y;
+  } else if (op === "−") {
+    return x - y;
+  }
 }
-    
 
 
-  eequality.addEventListener("click", function () {
-    let valeur2 = screen.innerText;
-    let result = "";
-    screen.innerText = "";
-    result = calculate(valeur1, slectedOp, valeur2);
-  
-    console.log(result);
-    return screen.append(result);
-  });
+equality.addEventListener("click", function (){
+  let valeur2 = screen.innerText;
+  let result = "";
+  screen.innerText = "";
+  result = calculate(valeur1, selectedOp, valeur2);
+
+  console.log(result);
+  return screen.append(result);
+} )
+
+
 
 
 
